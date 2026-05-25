@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Nia ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      overflow-x:hidden;
+      background:#120008;
+      color:white;
+    }
+
+    body::-webkit-scrollbar{
+      width:0;
+    }
+
+    .bg{
+      position:fixed;
+      inset:0;
+      background:
+      radial-gradient(circle at top,#4d001d,#120008 70%);
+      z-index:-3;
+    }
+
+    .particles span{
+      position:fixed;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:rgba(255,192,203,.5);
+      animation:float 8s linear infinite;
+      z-index:-1;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(100vh) scale(0);
+        opacity:0;
+      }
+      20%{
+        opacity:1;
+      }
+      100%{
+        transform:translateY(-20vh) scale(1.5);
+        opacity:0;
+      }
+    }
+
+    section{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
+      position:relative;
+    }
+
+    .gift-box{
+      width:160px;
+      cursor:pointer;
+      animation:bounce 2s infinite;
+      transition:.3s;
+      filter:drop-shadow(0 0 20px rgba(255,105,180,.5));
+    }
+
+    .gift-box:hover{
+      transform:scale(1.08);
+    }
+
+    @keyframes bounce{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+
+    .tap-text{
+      text-align:center;
+      margin-top:20px;
+      color:#ffc1d6;
+      letter-spacing:2px;
+      font-size:13px;
+    }
+
+    .hero{
+      text-align:center;
+      max-width:900px;
+    }
+
+    .hero small{
+      color:#ffc1d6;
+      letter-spacing:3px;
+      text-transform:lowercase;
+    }
+
+    .hero h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:90px;
+      line-height:1;
+      margin:20px 0;
+      font-weight:500;
+    }
+
+    .hero h1 span{
+      color:#ff9bc5;
+      font-style:italic;
+    }
+
+    .hero p{
+      color:#d8c0ca;
+      margin-top:10px;
+    }
+
+    .scroll{
+      margin-top:40px;
+      color:#ffc1d6;
+      letter-spacing:4px;
+      font-size:12px;
+    }
+
+    .music-player{
+      position:fixed;
+      left:20px;
+      bottom:20px;
+      width:170px;
+      background:rgba(255,255,255,.08);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,.1);
+      padding:14px;
+      border-radius:20px;
+      z-index:999;
+      box-shadow:0 0 20px rgba(0,0,0,.3);
+    }
+
+    .music-player img{
+      width:100%;
+      border-radius:14px;
+      margin-bottom:10px;
+    }
+
+    .music-player h4{
+      font-size:13px;
+      margin-bottom:5px;
+    }
+
+    .music-player p{
+      font-size:11px;
+      opacity:.7;
+    }
+
+    .music-player button{
+      margin-top:10px;
+      width:100%;
+      border:none;
+      background:#ff7bb5;
+      color:white;
+      padding:10px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    .love-letter{
+      background:rgba(255,255,255,.05);
+      backdrop-filter:blur(15px);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:30px;
+      max-width:800px;
+      padding:60px 40px;
+      text-align:center;
+      box-shadow:0 0 40px rgba(0,0,0,.3);
+    }
+
+    .love-letter h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:70px;
+      font-weight:500;
+      margin-bottom:20px;
+    }
+
+    .love-letter h2 span{
+      color:#ff8cbc;
+      font-style:italic;
+    }
+
+    .love-letter p{
+      line-height:1.9;
+      color:#ead7df;
+      margin-bottom:20px;
+    }
+
+    .signature{
+      color:#ff9bc5;
+      margin-top:30px;
+      font-size:30px;
+      font-family:'Cormorant Garamond',serif;
+      font-style:italic;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+      width:100%;
+      max-width:1100px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;
+      padding:35px 25px;
+      text-align:center;
+      backdrop-filter:blur(10px);
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      background:rgba(255,255,255,.08);
+    }
+
+    .card .emoji{
+      font-size:35px;
+      margin-bottom:15px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      font-family:'Cormorant Garamond',serif;
+      font-size:34px;
+      font-weight:500;
+    }
+
+    .card p{
+      color:#e3ccd4;
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .gallery{
+      width:100%;
+      max-width:1100px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      border-radius:24px;
+      transition:.4s;
+      border:1px solid rgba(255,255,255,.1);
+    }
+
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
+
+    .footer{
+      text-align:center;
+      padding:70px 20px;
+    }
+
+    .footer h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:60px;
+      font-weight:500;
+      margin-bottom:20px;
+    }
+
+    .footer p{
+      color:#e5cad5;
+      max-width:700px;
+      margin:auto;
+      line-height:1.8;
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:55px;
+      }
+
+      .love-letter h2{
+        font-size:50px;
+      }
+
+      .music-player{
+        width:140px;
+      }
+
+      .footer h2{
+        font-size:45px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="particles"></div>
+
+<div class="music-player">
+  <img src="foto2.jpg" alt="cover">
+
+  <h4>2001x</h4>
+  <p>Adrian Khalif</p>
+
+  <button onclick="toggleMusic()" id="musicBtn">Play Music</button>
+
+  <audio id="song" loop>
+    <source src="2001xAdrianKhalif.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<section id="gift">
+  <div>
+    <img
+      class="gift-box"
+      onclick="openGift()"
+      src="https://cdn-icons-png.flaticon.com/512/869/869636.png"
+      alt="gift"
+    >
+
+    <div class="tap-text">TAP TO OPEN ✨</div>
+  </div>
+</section>
+
+<section id="main" style="display:none;">
+  <div class="hero">
+    <small>🌸 a love letter in bloom</small>
+
+    <h1>
+      For You,<br>
+      <span>My Everything</span>
+    </h1>
+
+    <p>
+      Every petal holds a whisper of how much you mean to me.
+    </p>
+
+    <div class="scroll">SCROLL TO DISCOVER ↓</div>
+  </div>
+</section>
+
+<section>
+  <div class="love-letter">
+    <h2>
+      You are my <span>wildest dream</span> come true.
+    </h2>
+
+    <p>
+Happy Birthday, Sayang ❤️
+Hari ini adalah hari spesial karena seseorang yang sangat berarti dalam hidup aku lahir ke dunia. Terima kasih sudah hadir dan membawa begitu banyak kebahagiaan, tawa, dan warna dalam hidup aku.
+Aku berharap semua hal baik selalu datang untuk kamu. Semoga kamu selalu sehat, bahagia, dimudahkan dalam setiap langkah, dan semua impian yang kamu perjuangkan bisa terwujud satu per satu.
+      Nia, makasih karena udah hadir di hidup aku.
+      Semua hal terasa lebih indah sejak kenal kamu.
+      Cara kamu ketawa, perhatian kecil yang kamu kasih,
+      sampai cara kamu bikin hari buruk jadi terasa ringan,
+      semuanya selalu bikin aku jatuh cinta lagi.
+    </p>
+
+    <p>
+      Aku mungkin nggak selalu sempurna,
+      tapi aku selalu serius ketika bilang kalau aku sayang kamu.
+      Dan aku harap kita bisa terus bareng sampai lama banget.
+    </p>
+
+    <div class="signature">
+      — Always Yours 🌹
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cards">
+
+    <div class="card">
+      <div class="emoji">🌹</div>
+      <h3>Your Smile</h3>
+      <p>
+        Senyum kamu selalu jadi alasan kenapa hariku terasa lebih baik.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">✨</div>
+      <h3>Your Soul</h3>
+      <p>
+        Kamu punya hati yang hangat dan indah banget.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🌸</div>
+      <h3>Your Kindness</h3>
+      <p>
+        Cara kamu peduli ke orang lain selalu bikin aku kagum.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">💌</div>
+      <h3>Together</h3>
+      <p>
+        Semua momen sama kamu selalu jadi favorit aku.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🌺</div>
+      <h3>Your Strength</h3>
+      <p>
+        Kamu kuat banget walaupun sering nyembunyiin capek.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">💖</div>
+      <h3>Simply You</h3>
+      <p>
+        Jadi diri kamu sendiri aja udah lebih dari cukup.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="gallery">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+</div>
+</section>
+
+<div class="footer">
+  <h2>I Love You ❤️</h2>
+
+  <p>
+    Thank you for being part of my story.
+    No matter how many days pass,
+    I will always choose you
+I love you so much, probably more than I could ever put into words. I will never leave you, no matter what happens. I know I'm not perfect, but I will always do my best to be someone you can rely on.
+Whenever you're tired, need someone to talk to, or simply want to be heard, I'll always be here for you. I'm sorry if I can be annoying sometimes or worry too much—it's only because I truly care about you.
+To me, you are home, the place where my heart always wants to return. No matter what happens, I want us to keep fighting through everything together until things get better. ❤️
+    .
+  </p>
+</div>
+
+<script>
+
+  const particles = document.querySelector('.particles');
+
+  for(let i=0;i<35;i++){
+    let span = document.createElement('span');
+
+    span.style.left = Math.random()*100+'vw';
+    span.style.animationDuration = 5 + Math.random()*10 + 's';
+    span.style.opacity = Math.random();
+    span.style.width = span.style.height = 5 + Math.random()*10 + 'px';
+
+    particles.appendChild(span);
+  }
+
+  function openGift(){
+    document.getElementById('gift').style.display='none';
+    document.getElementById('main').style.display='flex';
+  }
+
+  const song = document.getElementById('song');
+  const musicBtn = document.getElementById('musicBtn');
+
+  function toggleMusic(){
+    if(song.paused){
+      song.play();
+      musicBtn.innerText='Pause Music';
+    }else{
+      song.pause();
+      musicBtn.innerText='Play Music';
+    }
+  }
+
+</script>
+
+</body>
+</html>
